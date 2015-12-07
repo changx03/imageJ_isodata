@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>net.imagej</groupId>
+		<artifactId>pom-imagej</artifactId>
+		<version>7.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>sc.fiji</groupId>
+	<artifactId>isodata_with_BIC_plugin</artifactId>
+	<version>0.1.0</version>
+
+	<name>plugins/isodata_with_BIC.jar</name>
+	<description>isodata with BIC</description>
+
+	<developers>
+		<developer>
+			<id>xcha011</id>
+			<name>Xinglong Chang</name>
+			<email>luke.x.chang@gmail.com</email>
+			<url>https://www.cs.auckland.ac.nz/en/about/our-people.html</url>
+			<organization>Computer Science - University of Auckland</organization>
+			<organizationUrl>https://www.cs.auckland.ac.nz/en.html</organizationUrl>
+			<roles>
+				<role>master student</role>
+			</roles>
+			<timezone>+12</timezone>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/imagej/minimal-ij1-plugin</connection>
+		<developerConnection>scm:git:git@github.com:imagej/minimal-ij1-plugin</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/imagej/minimal-ij1-plugin</url>
+	</scm>
+
+	<properties>
+		<main-class>isodata_with_BIC</main-class>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>${main-class}</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
